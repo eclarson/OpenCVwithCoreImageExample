@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B60CA1421BA3487800D3E417 /* OpenCVBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = B60CA1411BA3487800D3E417 /* OpenCVBridge.mm */; };
 		B62767831A9F999200CB0311 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62767821A9F999200CB0311 /* AppDelegate.swift */; };
 		B62767851A9F999200CB0311 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62767841A9F999200CB0311 /* ViewController.swift */; };
 		B62767881A9F999200CB0311 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B62767861A9F999200CB0311 /* Main.storyboard */; };
@@ -14,6 +15,16 @@
 		B627678D1A9F999200CB0311 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B627678B1A9F999200CB0311 /* LaunchScreen.xib */; };
 		B62767991A9F999200CB0311 /* LookinLiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62767981A9F999200CB0311 /* LookinLiveTests.swift */; };
 		B62767A31A9F99AF00CB0311 /* VideoAnalgesic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62767A21A9F99AF00CB0311 /* VideoAnalgesic.swift */; };
+		B66415701B8F698D004E084F /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B664156F1B8F698D004E084F /* opencv2.framework */; };
+		B66415721B8F699D004E084F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66415711B8F699D004E084F /* CoreMedia.framework */; };
+		B66415741B8F69A7004E084F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66415731B8F69A7004E084F /* QuartzCore.framework */; };
+		B66415761B8F69B4004E084F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66415751B8F69B4004E084F /* CoreVideo.framework */; };
+		B66415781B8F69BC004E084F /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66415771B8F69BC004E084F /* CoreAudio.framework */; };
+		B664157A1B8F69C6004E084F /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66415791B8F69C6004E084F /* CoreImage.framework */; };
+		B664157C1B8F69CE004E084F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B664157B1B8F69CE004E084F /* CoreGraphics.framework */; };
+		B664157E1B8F69DA004E084F /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B664157D1B8F69DA004E084F /* AssetsLibrary.framework */; };
+		B66415801B8F69E4004E084F /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B664157F1B8F69E4004E084F /* Accelerate.framework */; };
+		B66415821B8F69F5004E084F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66415811B8F69F5004E084F /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B60CA1401BA3487800D3E417 /* OpenCVBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVBridge.h; sourceTree = "<group>"; };
+		B60CA1411BA3487800D3E417 /* OpenCVBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVBridge.mm; sourceTree = "<group>"; };
 		B627677D1A9F999200CB0311 /* LookinLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LookinLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62767811A9F999200CB0311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B62767821A9F999200CB0311 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +51,17 @@
 		B62767971A9F999200CB0311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B62767981A9F999200CB0311 /* LookinLiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookinLiveTests.swift; sourceTree = "<group>"; };
 		B62767A21A9F99AF00CB0311 /* VideoAnalgesic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoAnalgesic.swift; sourceTree = "<group>"; };
+		B664156B1B8F68BB004E084F /* LookinLive-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LookinLive-Bridging-Header.h"; sourceTree = "<group>"; };
+		B664156F1B8F698D004E084F /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		B66415711B8F699D004E084F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		B66415731B8F69A7004E084F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B66415751B8F69B4004E084F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		B66415771B8F69BC004E084F /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		B66415791B8F69C6004E084F /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		B664157B1B8F69CE004E084F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B664157D1B8F69DA004E084F /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		B664157F1B8F69E4004E084F /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		B66415811B8F69F5004E084F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +69,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B66415821B8F69F5004E084F /* AVFoundation.framework in Frameworks */,
+				B66415801B8F69E4004E084F /* Accelerate.framework in Frameworks */,
+				B664157E1B8F69DA004E084F /* AssetsLibrary.framework in Frameworks */,
+				B664157C1B8F69CE004E084F /* CoreGraphics.framework in Frameworks */,
+				B664157A1B8F69C6004E084F /* CoreImage.framework in Frameworks */,
+				B66415781B8F69BC004E084F /* CoreAudio.framework in Frameworks */,
+				B66415761B8F69B4004E084F /* CoreVideo.framework in Frameworks */,
+				B66415741B8F69A7004E084F /* QuartzCore.framework in Frameworks */,
+				B66415721B8F699D004E084F /* CoreMedia.framework in Frameworks */,
+				B66415701B8F698D004E084F /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +95,16 @@
 		B62767741A9F999200CB0311 = {
 			isa = PBXGroup;
 			children = (
+				B66415811B8F69F5004E084F /* AVFoundation.framework */,
+				B664157F1B8F69E4004E084F /* Accelerate.framework */,
+				B664157D1B8F69DA004E084F /* AssetsLibrary.framework */,
+				B664157B1B8F69CE004E084F /* CoreGraphics.framework */,
+				B66415791B8F69C6004E084F /* CoreImage.framework */,
+				B66415771B8F69BC004E084F /* CoreAudio.framework */,
+				B66415751B8F69B4004E084F /* CoreVideo.framework */,
+				B66415731B8F69A7004E084F /* QuartzCore.framework */,
+				B66415711B8F699D004E084F /* CoreMedia.framework */,
+				B664156F1B8F698D004E084F /* opencv2.framework */,
 				B627677F1A9F999200CB0311 /* LookinLive */,
 				B62767951A9F999200CB0311 /* LookinLiveTests */,
 				B627677E1A9F999200CB0311 /* Products */,
@@ -85,6 +129,7 @@
 				B62767891A9F999200CB0311 /* Images.xcassets */,
 				B627678B1A9F999200CB0311 /* LaunchScreen.xib */,
 				B62767801A9F999200CB0311 /* Supporting Files */,
+				B664156B1B8F68BB004E084F /* LookinLive-Bridging-Header.h */,
 			);
 			path = LookinLive;
 			sourceTree = "<group>";
@@ -93,6 +138,8 @@
 			isa = PBXGroup;
 			children = (
 				B62767A21A9F99AF00CB0311 /* VideoAnalgesic.swift */,
+				B60CA1401BA3487800D3E417 /* OpenCVBridge.h */,
+				B60CA1411BA3487800D3E417 /* OpenCVBridge.mm */,
 				B62767811A9F999200CB0311 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -218,6 +265,7 @@
 				B62767A31A9F99AF00CB0311 /* VideoAnalgesic.swift in Sources */,
 				B62767851A9F999200CB0311 /* ViewController.swift in Sources */,
 				B62767831A9F999200CB0311 /* AppDelegate.swift in Sources */,
+				B60CA1421BA3487800D3E417 /* OpenCVBridge.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +388,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LookinLive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LookinLive/LookinLive-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +405,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LookinLive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LookinLive/LookinLive-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -409,6 +470,7 @@
 				B627679E1A9F999200CB0311 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B627679F1A9F999200CB0311 /* Build configuration list for PBXNativeTarget "LookinLiveTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +479,7 @@
 				B62767A11A9F999200CB0311 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -58,20 +58,34 @@ class ViewController: UIViewController {
             var optsFace = [CIDetectorImageOrientation:self.videoManager.getImageOrientationFromUIOrientation(UIApplication.sharedApplication().statusBarOrientation)]
             
             // get the face features
-            var features = detector.featuresInImage(imageInput, options: optsFace)
+            var features = detector.featuresInImage(imageInput, options: optsFace) as! [CIFaceFeature]
             var filterCenter = CGPoint()
+            var retImage = imageInput
             
-            // grab the last face and set it as center (easy to also do this for every face)
-            for f in features as! [CIFaceFeature]{
+            // do some processing in core image and in OpenCV
+            for f in features {
+                
+                // you can apply filters via core image
+                self.filter.setValue(retImage, forKey: kCIInputImageKey)
                 filterCenter.x = f.bounds.midX
                 filterCenter.y = f.bounds.midY
                 self.filter.setValue(CIVector(CGPoint: filterCenter), forKey: "inputCenter")
+                retImage = self.filter.outputImage
+                
+                // if you just want to process on separate queue use this code
+                // this is a non blocking call, but any changes to the image in OpenCV cannot be displayed
+                //dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0)) { () -> Void in
+                //    OpenCVBridge.OpenCVTransferFaces(f, usingImage: imageInput, andContext: self.videoManager.getCIContext())
+                //}
+                
+                // use this code if you are using OpenCV and want to add to the displayed image
+                // this is a blocking call
+                retImage = OpenCVBridge.OpenCVTransferFaceAndReturnNewImage(f, usingImage: retImage, andContext: self.videoManager.getCIContext())
             }
             
-            // if we had a face, filter it and return it to be displayed
+            // if we had a face, return the manipulated image
             if features.count>0 {
-                self.filter.setValue(imageInput, forKey: kCIInputImageKey)
-                return self.filter.outputImage
+                return retImage
             }
             else{
                 // else do not filter, just return the original image
