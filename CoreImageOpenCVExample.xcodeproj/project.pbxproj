@@ -13,7 +13,6 @@
 		B62767881A9F999200CB0311 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B62767861A9F999200CB0311 /* Main.storyboard */; };
 		B627678A1A9F999200CB0311 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B62767891A9F999200CB0311 /* Images.xcassets */; };
 		B627678D1A9F999200CB0311 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B627678B1A9F999200CB0311 /* LaunchScreen.xib */; };
-		B62767991A9F999200CB0311 /* LookinLiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62767981A9F999200CB0311 /* LookinLiveTests.swift */; };
 		B62767A31A9F99AF00CB0311 /* VideoAnalgesic.swift in Sources */ = {isa = PBXBuildFile; fileRef = B62767A21A9F99AF00CB0311 /* VideoAnalgesic.swift */; };
 		B66415701B8F698D004E084F /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B664156F1B8F698D004E084F /* opencv2.framework */; };
 		B66415721B8F699D004E084F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B66415711B8F699D004E084F /* CoreMedia.framework */; };
@@ -40,18 +39,16 @@
 /* Begin PBXFileReference section */
 		B60CA1401BA3487800D3E417 /* OpenCVBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenCVBridge.h; sourceTree = "<group>"; };
 		B60CA1411BA3487800D3E417 /* OpenCVBridge.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OpenCVBridge.mm; sourceTree = "<group>"; };
-		B627677D1A9F999200CB0311 /* LookinLive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LookinLive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B627677D1A9F999200CB0311 /* CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62767811A9F999200CB0311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B62767821A9F999200CB0311 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B62767841A9F999200CB0311 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B62767871A9F999200CB0311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B62767891A9F999200CB0311 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B627678C1A9F999200CB0311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		B62767921A9F999200CB0311 /* LookinLiveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LookinLiveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B62767971A9F999200CB0311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B62767981A9F999200CB0311 /* LookinLiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LookinLiveTests.swift; sourceTree = "<group>"; };
+		B62767921A9F999200CB0311 /* CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B62767A21A9F99AF00CB0311 /* VideoAnalgesic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoAnalgesic.swift; sourceTree = "<group>"; };
-		B664156B1B8F68BB004E084F /* LookinLive-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LookinLive-Bridging-Header.h"; sourceTree = "<group>"; };
+		B664156B1B8F68BB004E084F /* CoreImageOpenCVExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreImageOpenCVExample-Bridging-Header.h"; sourceTree = "<group>"; };
 		B664156F1B8F698D004E084F /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		B66415711B8F699D004E084F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		B66415731B8F69A7004E084F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -105,8 +102,7 @@
 				B66415731B8F69A7004E084F /* QuartzCore.framework */,
 				B66415711B8F699D004E084F /* CoreMedia.framework */,
 				B664156F1B8F698D004E084F /* opencv2.framework */,
-				B627677F1A9F999200CB0311 /* LookinLive */,
-				B62767951A9F999200CB0311 /* LookinLiveTests */,
+				B627677F1A9F999200CB0311 /* CoreImageOpenCVExample */,
 				B627677E1A9F999200CB0311 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -114,13 +110,13 @@
 		B627677E1A9F999200CB0311 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B627677D1A9F999200CB0311 /* LookinLive.app */,
-				B62767921A9F999200CB0311 /* LookinLiveTests.xctest */,
+				B627677D1A9F999200CB0311 /* CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */,
+				B62767921A9F999200CB0311 /* CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B627677F1A9F999200CB0311 /* LookinLive */ = {
+		B627677F1A9F999200CB0311 /* CoreImageOpenCVExample */ = {
 			isa = PBXGroup;
 			children = (
 				B62767821A9F999200CB0311 /* AppDelegate.swift */,
@@ -129,8 +125,9 @@
 				B62767891A9F999200CB0311 /* Images.xcassets */,
 				B627678B1A9F999200CB0311 /* LaunchScreen.xib */,
 				B62767801A9F999200CB0311 /* Supporting Files */,
-				B664156B1B8F68BB004E084F /* LookinLive-Bridging-Header.h */,
+				B664156B1B8F68BB004E084F /* CoreImageOpenCVExample-Bridging-Header.h */,
 			);
+			name = CoreImageOpenCVExample;
 			path = LookinLive;
 			sourceTree = "<group>";
 		};
@@ -145,29 +142,12 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		B62767951A9F999200CB0311 /* LookinLiveTests */ = {
-			isa = PBXGroup;
-			children = (
-				B62767981A9F999200CB0311 /* LookinLiveTests.swift */,
-				B62767961A9F999200CB0311 /* Supporting Files */,
-			);
-			path = LookinLiveTests;
-			sourceTree = "<group>";
-		};
-		B62767961A9F999200CB0311 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				B62767971A9F999200CB0311 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B627677C1A9F999200CB0311 /* LookinLive */ = {
+		B627677C1A9F999200CB0311 /* CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_rename */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B627679C1A9F999200CB0311 /* Build configuration list for PBXNativeTarget "LookinLive" */;
+			buildConfigurationList = B627679C1A9F999200CB0311 /* Build configuration list for PBXNativeTarget "CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_rename" */;
 			buildPhases = (
 				B62767791A9F999200CB0311 /* Sources */,
 				B627677A1A9F999200CB0311 /* Frameworks */,
@@ -177,14 +157,14 @@
 			);
 			dependencies = (
 			);
-			name = LookinLive;
+			name = CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
 			productName = LookinLive;
-			productReference = B627677D1A9F999200CB0311 /* LookinLive.app */;
+			productReference = B627677D1A9F999200CB0311 /* CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B62767911A9F999200CB0311 /* LookinLiveTests */ = {
+		B62767911A9F999200CB0311 /* CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B627679F1A9F999200CB0311 /* Build configuration list for PBXNativeTarget "LookinLiveTests" */;
+			buildConfigurationList = B627679F1A9F999200CB0311 /* Build configuration list for PBXNativeTarget "CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests" */;
 			buildPhases = (
 				B627678E1A9F999200CB0311 /* Sources */,
 				B627678F1A9F999200CB0311 /* Frameworks */,
@@ -195,9 +175,9 @@
 			dependencies = (
 				B62767941A9F999200CB0311 /* PBXTargetDependency */,
 			);
-			name = LookinLiveTests;
+			name = CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests;
 			productName = LookinLiveTests;
-			productReference = B62767921A9F999200CB0311 /* LookinLiveTests.xctest */;
+			productReference = B62767921A9F999200CB0311 /* CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -218,7 +198,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B62767781A9F999200CB0311 /* Build configuration list for PBXProject "LookinLive" */;
+			buildConfigurationList = B62767781A9F999200CB0311 /* Build configuration list for PBXProject "CoreImageOpenCVExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -231,8 +211,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B627677C1A9F999200CB0311 /* LookinLive */,
-				B62767911A9F999200CB0311 /* LookinLiveTests */,
+				B627677C1A9F999200CB0311 /* CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_rename */,
+				B62767911A9F999200CB0311 /* CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests */,
 			);
 		};
 /* End PBXProject section */
@@ -273,7 +253,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B62767991A9F999200CB0311 /* LookinLiveTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +261,7 @@
 /* Begin PBXTargetDependency section */
 		B62767941A9F999200CB0311 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B627677C1A9F999200CB0311 /* LookinLive */;
+			target = B627677C1A9F999200CB0311 /* CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_rename */;
 			targetProxy = B62767931A9F999200CB0311 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -395,9 +374,10 @@
 				);
 				INFOPLIST_FILE = LookinLive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "LookinLive/LookinLive-Bridging-Header.h";
+				PRODUCT_NAME = CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
+				SWIFT_OBJC_BRIDGING_HEADER = "LookinLive/CoreImageOpenCVExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "";
 			};
 			name = Debug;
 		};
@@ -412,8 +392,9 @@
 				);
 				INFOPLIST_FILE = LookinLive/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "LookinLive/LookinLive-Bridging-Header.h";
+				PRODUCT_NAME = CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
+				SWIFT_OBJC_BRIDGING_HEADER = "LookinLive/CoreImageOpenCVExample-Bridging-Header.h";
+				TEST_HOST = "";
 			};
 			name = Release;
 		};
@@ -431,7 +412,7 @@
 				);
 				INFOPLIST_FILE = LookinLiveTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LookinLive.app/LookinLive";
 			};
 			name = Debug;
@@ -446,7 +427,7 @@
 				);
 				INFOPLIST_FILE = LookinLiveTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LookinLive.app/LookinLive";
 			};
 			name = Release;
@@ -454,7 +435,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B62767781A9F999200CB0311 /* Build configuration list for PBXProject "LookinLive" */ = {
+		B62767781A9F999200CB0311 /* Build configuration list for PBXProject "CoreImageOpenCVExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B627679A1A9F999200CB0311 /* Debug */,
@@ -463,7 +444,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B627679C1A9F999200CB0311 /* Build configuration list for PBXNativeTarget "LookinLive" */ = {
+		B627679C1A9F999200CB0311 /* Build configuration list for PBXNativeTarget "CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_rename" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B627679D1A9F999200CB0311 /* Debug */,
@@ -472,7 +453,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B627679F1A9F999200CB0311 /* Build configuration list for PBXNativeTarget "LookinLiveTests" */ = {
+		B627679F1A9F999200CB0311 /* Build configuration list for PBXNativeTarget "CoreImageOpenCVExample.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B62767A01A9F999200CB0311 /* Debug */,

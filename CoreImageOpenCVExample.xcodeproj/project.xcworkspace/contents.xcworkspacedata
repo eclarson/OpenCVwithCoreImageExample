@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:LookinLive.xcodeproj">
+      location = "self:/Users/eclarson/Desktop/VideoAnalgesicWithOpenCV/CoreImageOpenCVExample.xcodeproj">
    </FileRef>
 </Workspace>
