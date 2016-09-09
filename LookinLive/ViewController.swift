@@ -11,13 +11,13 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
-    // outlets in view
+    //MARK: Outlets in view
     @IBOutlet weak var flashSlider: UISlider!
     
-    // the video manager model
+    //MARK: Video Manager
     var videoManager : VideoAnalgesic! = nil
     
-    // any custom filters we want
+    //MARK: CI Filters
     let filter :CIFilter = CIFilter(name: "CIBumpDistortion")!
     
     override func viewDidLoad() {
@@ -78,7 +78,7 @@ class ViewController: UIViewController {
                 //    OpenCVBridge.OpenCVTransferFaces(f, usingImage: imageInput, andContext: self.videoManager.getCIContext())
                 //}
                 
-                // use this code if you are using OpenCV and want to add to the displayed image
+                // use this code if you are using OpenCV and want to overwrite the displayed image via OpenCv
                 // this is a blocking call
                 retImage = OpenCVBridge.OpenCVTransferFaceAndReturnNewImage(f, usingImage: retImage, andContext: self.videoManager.getCIContext())
             }
@@ -97,7 +97,7 @@ class ViewController: UIViewController {
         self.videoManager.start()
     }
 
-    // some convenience methods
+    //MARK: Convenience Methods
     @IBAction func flash(sender: AnyObject) {
         if(self.videoManager.toggleFlash()){
             self.flashSlider.value = 1.0

@@ -16,7 +16,19 @@ using namespace cv;
 
 @implementation OpenCVBridge
 
+#pragma mark Write Your Code Here
+// write your code here to prcess the Open CV image using c++
++(cv::Mat)processImage:(cv::Mat)input{
+    // the overhead of using OpenCV here is dramatically reduced because it is on a smaller image of only the face
+    cv::Mat frame_gray;
+    cvtColor( input, frame_gray, CV_BGR2GRAY );
+    bitwise_not(frame_gray, frame_gray);
+    return frame_gray;
+}
 
+
+
+#pragma mark Bridging OpenCV/CI Functions
 // code manipulated from
 // http://stackoverflow.com/questions/30867351/best-way-to-create-a-mat-from-a-ciimage
 // http://stackoverflow.com/questions/10254141/how-to-convert-from-cvmat-to-uiimage-in-objective-c
@@ -135,25 +147,18 @@ using namespace cv;
     
 }
 
-// testing of the passing of params to swift
-+(void)testFaceFeature:(CIFaceFeature *)faceFeature{
-    
-}
+//// testing of the passing of params to swift
+//+(void)testFaceFeature:(CIFaceFeature *)faceFeature{
+//    
+//}
+//
+//+(void)testImage:(CIImage*)ciFrameImage{
+//    
+//}
+//
+//+(void)testContext:(CIContext*)context{
+//    
+//}
 
-+(void)testImage:(CIImage*)ciFrameImage{
-    
-}
-
-+(void)testContext:(CIContext*)context{
-    
-}
-
-+(cv::Mat)processImage:(cv::Mat)input{
-    // the overhead of using OpenCV here is dramatically reduced because it is on a smaller image of only the face
-    cv::Mat frame_gray;
-    cvtColor( input, frame_gray, CV_BGR2GRAY );
-    bitwise_not(frame_gray, frame_gray);
-    return frame_gray;
-}
 
 @end

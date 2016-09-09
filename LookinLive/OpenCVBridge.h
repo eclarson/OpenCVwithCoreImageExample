@@ -15,11 +15,11 @@
 
 + (CIImage*)OpenCVTransferFaceAndReturnNewImage:(CIFaceFeature *)faceFeature usingImage:(CIImage*)ciFrameImage andContext:(CIContext*)context;
 
-+(void)testFaceFeature:(CIFaceFeature *)faceFeature;
-
-+(void)testImage:(CIImage*)ciFrameImage;
-
-+(void)testContext:(CIContext*)context;
+//+(void)testFaceFeature:(CIFaceFeature *)faceFeature;
+//
+//+(void)testImage:(CIImage*)ciFrameImage;
+//
+//+(void)testContext:(CIContext*)context;
 
 
 
