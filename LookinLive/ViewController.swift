@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     var videoManager : VideoAnalgesic! = nil
     
     // any custom filters we want
-    let filter :CIFilter = CIFilter(name: "CIBumpDistortion")
+    let filter :CIFilter = CIFilter(name: "CIBumpDistortion")!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         // setup a face detector in swift
         let detector = CIDetector(ofType: CIDetectorTypeFace,
             context: self.videoManager.getCIContext(),
-            options: optsDetector as [NSObject : AnyObject])
+            options: (optsDetector as! [String : AnyObject]))
         
         
         // set the processing closure
@@ -55,10 +55,10 @@ class ViewController: UIViewController {
         self.videoManager.setProcessingBlock( { (imageInput) -> (CIImage) in
             
             // this ungodly mess makes sure the image is the correct orientation
-            var optsFace = [CIDetectorImageOrientation:self.videoManager.getImageOrientationFromUIOrientation(UIApplication.sharedApplication().statusBarOrientation)]
+            let optsFace = [CIDetectorImageOrientation:self.videoManager.getImageOrientationFromUIOrientation(UIApplication.sharedApplication().statusBarOrientation)]
             
             // get the face features
-            var features = detector.featuresInImage(imageInput, options: optsFace) as! [CIFaceFeature]
+            let features = detector.featuresInImage(imageInput, options: optsFace) as! [CIFaceFeature]
             var filterCenter = CGPoint()
             var retImage = imageInput
             
@@ -70,7 +70,7 @@ class ViewController: UIViewController {
                 filterCenter.x = f.bounds.midX
                 filterCenter.y = f.bounds.midY
                 self.filter.setValue(CIVector(CGPoint: filterCenter), forKey: "inputCenter")
-                retImage = self.filter.outputImage
+                retImage = self.filter.outputImage!
                 
                 // if you just want to process on separate queue use this code
                 // this is a non blocking call, but any changes to the image in OpenCV cannot be displayed

@@ -197,12 +197,12 @@ class VideoAnalgesic: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AV
         }
         
         NSNotificationCenter.defaultCenter().addObserver(self,
-            selector:"updateOrientation",
+            selector:#selector(VideoAnalgesic.updateOrientation),
             name:"UIApplicationDidChangeStatusBarOrientationNotification",
             object:nil)
         
         dispatch_async(captureSessionQueue){
-            var error:NSError? = nil;
+            let error:NSError? = nil;
             
             // get the input device and also validate the settings
             let videoDevices = AVCaptureDevice.devicesWithMediaType(AVMediaTypeVideo)
@@ -218,7 +218,7 @@ class VideoAnalgesic: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AV
             }
             
             // obtain device input
-            let videoDeviceInput: AVCaptureDeviceInput = AVCaptureDeviceInput.deviceInputWithDevice(self.videoDevice, error:&error) as! AVCaptureDeviceInput
+            let videoDeviceInput: AVCaptureDeviceInput = (try! AVCaptureDeviceInput(device: self.videoDevice))
             
             if (error != nil)
             {
@@ -352,8 +352,8 @@ class VideoAnalgesic: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AV
     // video buffer delegate
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputSampleBuffer sampleBuffer: CMSampleBuffer!, fromConnection connection: AVCaptureConnection!) {
         
-        var imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
-        var sourceImage = CIImage(CVPixelBuffer: imageBuffer as CVPixelBufferRef, options:nil)
+        let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer)
+        let sourceImage = CIImage(CVPixelBuffer: imageBuffer! as CVPixelBufferRef, options:nil)
         
         // run through a filter
         var filteredImage:CIImage! = nil;
@@ -362,7 +362,7 @@ class VideoAnalgesic: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AV
             filteredImage=self.processBlock!(imageInput: sourceImage)
         }
         
-        let sourceExtent:CGRect = sourceImage.extent()
+        let sourceExtent:CGRect = sourceImage.extent
         
         let sourceAspect = sourceExtent.size.width / sourceExtent.size.height;
         let previewAspect = self.videoPreviewViewBounds.size.width  / self.videoPreviewViewBounds.size.height;
@@ -415,11 +415,19 @@ class VideoAnalgesic: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AV
         var isOn = false
         if let device = self.videoDevice{
             if (device.hasTorch && self.devicePosition == AVCaptureDevicePosition.Back) {
-                device.lockForConfiguration(nil)
+                do {
+                    try device.lockForConfiguration()
+                } catch _ {
+                }
                 if (device.torchMode == AVCaptureTorchMode.On) {
                     device.torchMode = AVCaptureTorchMode.Off
                 } else {
-                    isOn = device.setTorchModeOnWithLevel(1.0, error: nil)
+                    do {
+                        try device.setTorchModeOnWithLevel(1.0)
+                        isOn = true
+                    } catch _ {
+                        isOn = false
+                    }
                 }
                 device.unlockForConfiguration()
             }
@@ -432,8 +440,16 @@ class VideoAnalgesic: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AV
         var isOverHeating = false
         if let device = self.videoDevice{
             if (device.hasTorch && self.devicePosition == AVCaptureDevicePosition.Back && level>0 && level<=1) {
-                device.lockForConfiguration(nil)
-                isOverHeating = device.setTorchModeOnWithLevel(level, error: nil)
+                do {
+                    try device.lockForConfiguration()
+                } catch _ {
+                }
+                do {
+                    try device.setTorchModeOnWithLevel(level)
+                    isOverHeating = true
+                } catch _ {
+                    isOverHeating = false
+                }
                 device.unlockForConfiguration()
             }
         }
@@ -444,7 +460,10 @@ class VideoAnalgesic: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AV
     func turnOffFlash(){
         if let device = self.videoDevice{
             if (device.hasTorch && device.torchMode == AVCaptureTorchMode.On) {
-                device.lockForConfiguration(nil)
+                do {
+                    try device.lockForConfiguration()
+                } catch _ {
+                }
                 device.torchMode = AVCaptureTorchMode.Off
                 device.unlockForConfiguration()
             }
